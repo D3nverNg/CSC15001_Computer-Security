@@ -1,0 +1,11 @@
+services:
+  bmpcutter:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5000"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.1'
+          memory: 64M
